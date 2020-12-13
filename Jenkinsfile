@@ -1,9 +1,9 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Compile'){
-            setps{
-                sh 'mnv clean compile'
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn -DskipTests clean compile'
             }
         }
     }
